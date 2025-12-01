@@ -1,13 +1,176 @@
 start:
   title: Behala
   text: |
-    Your name is Raphael and you live in Behala, a trash dump. You spend your time picking through trash for money. 
+    Your name is Raphael and you live in Behala, a trash dump. You spend your time picking through trash for money.
     
     One day, you and your loyal friend Gardo find a wallet containing eleven hundred pesos, an ID for a man named José Angelico, and a key.
-    
-    That night, the police come to Behala to ask if anyone has found the wallet. They offer a cash reward of ten thousand pesos, and one hundred a day searching for it. What do you do?
+
+    That night, the police come to Behala to ask if anyone has found the wallet. They offer a cash reward of ten thousand pesos, and one hundred a day searching for it. What do you do?  choices:
   choices:
     - text: Keep quiet
       next: rat_advice
     - text: Give up the wallet
       next: give_up_wallet
+
+give_up_wallet:
+  title: The police
+  text: |
+    You give the wallet to the police. They snatch it out of your hand, and leave quickly without giving any reward. Gardo says that ‘they were never going to give us anything’.
+
+    A few weeks later, digging through the stupp, you find a newspaper. At the front page says ‘Zapanta Reclaims His Stolen Millions!’ That money could have been yours.
+  choices:
+    - text: Restart
+      next: start
+
+rat_advice:
+  title: Rat's house
+  text: You and Gardo go to your friend Rat’s home. Rat lives at the bottom of a disused conveyor belt, and is called Rat due to his similarities with one. He asks you what the wallet is, and you show him the ID and the key, labelled “101”. Rat recognises the key and tells you that it’s the key to a station locker.
+  choices:
+    - text: Go to open the locker
+      next: locker_open
+    - text: Leave the key with Rat
+      next: leave_key
+
+leave_key:
+  title: Rat's house
+  text: Rat keeps the key, and he says he’ll give you whatever he finds at the locker. The following day, you go down to where Rat lives; the money you gave him is there but there is no sign of him or the key. You wonder where he went.
+  choices:
+    - text: Go to the station to meet Rat
+      next: locker_open
+    - text: Take the money and leave
+      next: rat_ransack
+
+rat_ransack:
+  title: Rat's house
+  text: |
+    You grab the money you paid Rat, and scour his whole house for any extra money. You find another 100 pesos, but Rat doesn’t have any riches hidden away.
+
+    The next day, Rat returns. He discovers that you didn’t trust him and took his money, and refuses to tell you what he found at the locker, except that it’s valuable and important.
+
+    During the night, Rat’s arrested and you never see him again. Because you didn’t trust another poor trash boy, you never found out what was in the locker.
+  choices:
+    - text: Restart
+      next: start
+
+locker_open:
+  title: Central Station
+  text: |
+    You all go to Central Station and Rat pays off the station boys to not tell anyone you’re there. Inside locker 101 is a letter addressed to a prisoner named Gabriel Olondriz and inside, a slip of paper with a code of numbers on it. You go to the Mission School, which Father Julliard (a foreigner) runs, and use the computer there to research Gabriel. You find out that he’s a prisoner serving his 23rd year in prison.
+
+    It’s late at night and you hear loud shouting. Four vans arrived at Behala and everyone was ordered out of their houses. A young policeman nods in your direction and two policemen come to you and take hold of your arms. They shove you in a van and bring you to the police station. They interrogate you, and you feel very scared.
+  choices:
+    - text: Tell them the truth
+      next: interrogation_truth
+    - text: Keep with your story
+      next: interrogation_lie
+
+interrogation_truth:
+  title: Police Station
+  text: |
+    As they dangle you out of the window, you start crying, and break down. You tell them everything, how you found José Angelico‘s wallet, and how there was money inside and a key to a locker, where you found a letter to Gabriel Olondriz, but you don’t know anything and you just want to go home and for them to please not throw him out.
+
+    They shout at you, annoyed how long it took you to confess, and drop you onto solid concrete. They then go back to Behala and arrest Rat and Gardo, and take the letter and José’s wallet.
+  choices:
+    - text: Restart
+      next: start
+
+interrogation_lie:
+  title: Police Station
+  text: You stick with your story and lie through your teeth about how you never found any bag, but the policemen accuse you of lying. They hold you out of the window, threatening to drop you onto the hard concrete far below, unless you tell them the truth.
+  choices:
+    - text: Persist
+      next: interrogation_success
+    - text: Tell the truth
+      next: interrogation_truth
+
+interrogation_success:
+  title: Behala
+  text: |
+    The police keep threatening you, but you don’t give in and keep with the story so they let you go. You run back to Behala and tell Gardo and Rat what happened. You, Rat and Gardo persuade Sister Olivia to take Gardo to the prison, claiming Gabriel Olondriz is Gardo’s grandfather.
+
+    Gardo comes back a few hours later, and tells you that he asked Gabriel about the letter and that the string of numbers were encrypted with a Bible. He says a guard was going to give the Bible to him, but didn’t get anything.
+
+    The next day, the police come again and question Sister Olivia, and you never see her again. You decide to escape from Behala and sneak away in the dead of night. Rat brings a huge stash of money he’s saved up and you use it to buy a small room.
+  choices:
+    - text: Next
+      next: chinatown_trade
+
+chinatown_trade:
+  title: Chinatown
+  text: |
+    Gardo meets with the prison guard and discovers that the guard wants twenty thousand pesos. You don’t have enough money for it and go to sleep, troubled. The next morning Rat somehow has enough money. After questioning him, you find out that he stole the money from the Mission School’s safe.
+
+    Gardo goes to a teahouse in Chinatown and trades with the guard. The guard tries to grab him, but Gardo slashes the guard’s face with his hook and runs out, past a cop. He passes the Bible to Rat, and all three of you escape safely.
+
+    It’s very late at night and you haven’t been able to decipher the message at all. Every attempt you make brings up gibberish and you’re wondering if you should just sell the Bible to the police, or back to the guard, since there must be a large bounty on it and you’re getting nowhere.
+  choices:
+    - text: Keep trying
+      next: book_code_success
+    - text: Go to sleep
+      next: book_code_sleep
+
+book_code_sleep:
+  title: The Shack
+  text: |
+    You all go to sleep just before midnight and have a lot of rest — you’d been running from the police all week. You’re all asleep, so none of you notice that the subtle morning sounds, like the old lady downstairs making noise, aren‘t there. The day is dead silent. 
+
+    Someone walks up the ladder. Their footsteps are heavy. He sees that you’re all asleep, and the rest of the police come in. You’re jailed for life at an unfair hearing and never crack the code.
+  choices:
+    - text: Restart
+      next: start
+
+book_code_success:
+  title: The Shack
+  text: |
+    Just around midnight, you crack the book-code and translate the numbers. It says “Go to the map ref where we lay look for the brightest light my child”. You check a map, but there’s no hidden crosses or circles anywhere, until you see “Prisoner 746229” on the letter to Gabriel. Gardo points out that 746229 wasn’t Gabriel’s prisoner number, and so you try the numbers with the map.
+
+    You split them into 746 and 229, and sure enough, the map has a 74 and a 22, and they come together right where a graveyard is. You realise that “where we lay” means “where we are buried”, and then you see the time and realise you’ve worked through the whole night.
+  choices:
+    - text: Next
+      next: book_code_ambush
+
+book_code_ambush:
+  title: The Streets
+  text: |
+    You’re just blowing out the candles and putting the papers together when Rat hears a heavy step on the ladder below. He points out how quiet it is, how the old lady downstairs isn’t complaining, how the children aren’t making mischief, and you all stop and wonder. You all carefully climb up onto the roof and run over the rooftops.
+
+    Police are chasing you, on cars and on foot, but you get to a building full of schoolkids and blend in. You make it through the streets and get into a taxi, heading for the graveyard. Because it’s All Souls Day, everyone is at the graveyard to pay respect to their relatives and you blend in. Where do you search for José’s grave?
+  choices:
+    - text: Rich side
+      next: graveyard_rich
+    - text: Poor side
+      next: graveyard_poor
+
+graveyard_poor:
+  title: Naravo 
+  text: |
+    You go straight to the poor side of the cemetery, since José was not a rich man, and start searching for the “brightest light”. You find the Angelico’s graves, stacked in coffin-size compartments, and decide to break open José’s grave, hoping he would have hidden the money inside.
+
+    Unfortunately, there’s a small crowd around you, and when they find that there are three boys breaking open a man’s grave, they call the police and you’re taken away.
+
+    Weeks pass and you get a newspaper. “Zapanta Reclaims His Stolen Millions!”, the headline says. You’ve lost hope. Zapanta has won.
+  choices:
+    - text: Restart
+      next: start
+
+graveyard_rich:
+  title: Naravo Cemetery
+  text: |
+    You spend the whole day looking for “the brightest light”, but you see nothing. It’s only when the sun starts to set that you realise — José’s family was quite poor, and you’ve been searching the wrong side of the graveyard.
+
+    You cross over and sure enough, quickly locate the stack of coffin-like concrete blocks. You’re not sure which grave might contain the money, but then you see Pia Dante, José’s daughter, sitting on top, claiming she is waiting for her dad.
+
+    Rat notices that Pia is very malnourished, and you get her water and a meal, renting a hotel room for her. Later, you realise that the cash must be inside her grave, so you break open her grave and find six million dollars stuffed inside.
+  choices:
+    - text: Next
+      next: behala_money
+
+behala_money:
+  title: Behala
+  text: |
+    You grab the money, so much it’s heavy to carry, and go back to Behala. There you disguise yourself with uniforms from the Mission School and go to the top of the conveyor belt. You throw five and a half million dollars into Behala, hoping many trash boys will find cash instead of stupp in the morning.
+
+    You use the remaining 500 thousand dollars to take a ferry to Sampalo, where Rat was originally from, and you, Pia, Gardo, and Rat all live happy lives fishing for fun, without a need to earn money.
+  choices:
+    - text: Restart
+      next: start
