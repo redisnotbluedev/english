@@ -1,0 +1,13 @@
+start:
+  title: Behala
+  text: |
+    Your name is Raphael and you live in Behala, a trash dump. You spend your time picking through trash for money. 
+    
+    One day, you and your loyal friend Gardo find a wallet containing eleven hundred pesos, an ID for a man named José Angelico, and a key.
+    
+    That night, the police come to Behala to ask if anyone has found the wallet. They offer a cash reward of ten thousand pesos, and one hundred a day searching for it. What do you do?
+  choices:
+    - text: Keep quiet
+      next: rat_advice
+    - text: Give up the wallet
+      next: give_up_wallet

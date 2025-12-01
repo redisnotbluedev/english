@@ -5,7 +5,9 @@
 
 	let data;
 	try {
-		data = await fetch("english.json").then(response => response.json());
+		const response = await fetch("english.yaml");
+		const yamlText = await response.text();
+		data = jsyaml.load(yamlText);
 	} catch (error) {
 		alert(`Error: Failed to fetch game data: ${error.message}`);
 		throw error;
