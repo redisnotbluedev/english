@@ -13,7 +13,7 @@
 		throw error;
 	}
 
-	window.navigateTo = function(nodeName) {
+	window.navigateTo = async function(nodeName) {
 		let node = data[nodeName];
 
 		if (!node) {
@@ -21,7 +21,8 @@
 		}
 
 		title.innerText = node.title;
-		[...node.text.split].forEach((char, index) => {
+		text.innerText = "";
+		[...node.text].forEach((char, index) => {
 			text.innerText += char;
 			await new Promise(resolve => setTimeout(resolve, 10));
 		})
