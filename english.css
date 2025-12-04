@@ -1,6 +1,7 @@
 * {
 	padding: 0;
 	margin: 0;
+	color: white;
 	font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -46,7 +47,6 @@ main {
 	justify-content: space-evenly;
 	padding: 15px;
 	gap: 20px;
-	background-color: #2d4a73;
 }
 
 button {
@@ -55,5 +55,9 @@ button {
 	border-radius: 8px;
 	height: 40px;
 	cursor: pointer;
+	background-color: #2d4a73;
+}
+
+button:hover {
 	background-color: #3d5f91;
 }
