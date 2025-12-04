@@ -13,7 +13,7 @@ start:
       next: give_up_wallet
 
 give_up_wallet:
-  title: The police
+  title: Poor Ending
   text: |
     You give the wallet to the police. They snatch it out of your hand, and leave quickly without giving any reward. Gardo says that ‘they were never going to give us anything’.
 
@@ -41,7 +41,7 @@ leave_key:
       next: rat_ransack
 
 rat_ransack:
-  title: Rat's house
+  title: Betrayal Ending
   text: |
     You grab the money you paid Rat, and scour his whole house for any extra money. You find another 100 pesos, but Rat doesn’t have any riches hidden away.
 
@@ -65,7 +65,7 @@ locker_open:
       next: interrogation_lie
 
 interrogation_truth:
-  title: Police Station
+  title: Dropped Ending
   text: |
     As they dangle you out of the window, you start crying, and break down. You tell them everything, how you found José Angelico‘s wallet, and how there was money inside and a key to a locker, where you found a letter to Gabriel Olondriz, but you don’t know anything and you just want to go home and for them to please not throw him out.
 
@@ -110,7 +110,7 @@ chinatown_trade:
       next: book_code_sleep
 
 book_code_sleep:
-  title: The Shack
+  title: Caught Ending
   text: |
     You all go to sleep just before midnight and have a lot of rest — you’d been running from the police all week. You’re all asleep, so none of you notice that the subtle morning sounds, like the old lady downstairs making noise, aren‘t there. The day is dead silent. 
 
@@ -142,7 +142,7 @@ book_code_ambush:
       next: graveyard_poor
 
 graveyard_poor:
-  title: Naravo 
+  title: Graverobber Ending
   text: |
     You go straight to the poor side of the cemetery, since José was not a rich man, and start searching for the “brightest light”. You find the Angelico’s graves, stacked in coffin-size compartments, and decide to break open José’s grave, hoping he would have hidden the money inside.
 
@@ -166,7 +166,7 @@ graveyard_rich:
       next: behala_money
 
 behala_money:
-  title: Behala
+  title: Canon Ending
   text: |
     You grab the money, so much it’s heavy to carry, and go back to Behala. There you disguise yourself with uniforms from the Mission School and go to the top of the conveyor belt. You throw five and a half million dollars into Behala, hoping many trash boys will find cash instead of stupp in the morning.
 
