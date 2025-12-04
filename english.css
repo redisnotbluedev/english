@@ -36,6 +36,8 @@ main {
 
 .text {
 	flex: 1;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
 
 .buttons {
