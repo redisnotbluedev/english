@@ -23,13 +23,12 @@
 	
 		title.innerText = node.title;
 		text.innerText = "";
+		buttons.innerHTML = "";
 		
 		for (let char of node.text) {
 			text.innerText += char;
 			await new Promise(resolve => setTimeout(resolve, 10));
 		}
-		
-		buttons.innerHTML = "";
 	
 		node.choices.forEach(choice => {
 			let button = document.createElement("button");
