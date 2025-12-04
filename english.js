@@ -21,7 +21,10 @@
 		}
 
 		title.innerText = node.title;
-		text.innerHTML = node.text;
+		[...node.text.split].forEach((char, index) => {
+			text.innerText += char;
+			await new Promise(resolve => setTimeout(resolve, 10));
+		})
 		buttons.innerHTML = "";
 
 		node.choices.forEach(choice => {
