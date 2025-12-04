@@ -15,6 +15,7 @@ main {
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	background-color: #0a1628;
 }
 
 .node {
@@ -25,6 +26,7 @@ main {
 	height: 50%;
 	display: flex;
 	flex-direction: column;
+	background-color: #1a2942;
 }
 
 .title {
@@ -42,6 +44,7 @@ main {
 	justify-content: space-evenly;
 	padding: 15px;
 	gap: 20px;
+	background-color: #2d4a73;
 }
 
 button {
@@ -49,5 +52,6 @@ button {
 	border: none;
 	border-radius: 8px;
 	height: 40px;
-	cursor: pointer;	
+	cursor: pointer;
+	background-color: #3d5f91;
 }
