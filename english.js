@@ -15,19 +15,22 @@
 
 	window.navigateTo = async function(nodeName) {
 		let node = data[nodeName];
-
+	
 		if (!node) {
-			alert(`Error: scene ${nodeName} not found!`)
+			alert(`Error: scene ${nodeName} not found!`);
+			return;
 		}
-
+	
 		title.innerText = node.title;
 		text.innerText = "";
-		[...node.text].forEach((char, index) => {
+		
+		for (let char of node.text) {
 			text.innerText += char;
 			await new Promise(resolve => setTimeout(resolve, 10));
-		})
+		}
+		
 		buttons.innerHTML = "";
-
+	
 		node.choices.forEach(choice => {
 			let button = document.createElement("button");
 			button.innerText = choice.text;
